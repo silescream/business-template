@@ -1,0 +1,144 @@
+$main-blue: #4A99D3;
+$main-text: #260041;
+$main-black: #0F001A;
+$orange: #D3844A;
+
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Objective, sans-serif ;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+
+    @include for-tablet-only {
+        max-width: 760px;
+    }
+
+    @include for-phone-landscape {
+        max-width: 540px;
+    }
+
+    @include for-phone-only {
+        width: 100%;
+    }
+    
+}
+
+.black {
+    background: $main-black;
+}
+
+.bar {
+    position: absolute;
+    width: 141.31px;
+    height: 118.57px;
+    border-radius: 4px;
+}
+
+.blue-large {
+    border: 8px solid $main-blue;
+}
+
+.blue-small {
+    border: 6px solid $main-blue;
+}
+
+.brown-large {
+    border: 8px solid $orange;
+}
+
+.brown-small {
+    border: 6px solid $orange;
+}
+
+.text-line {
+    border: 1px solid white;
+    width: 100%;
+    position: absolute;
+    bottom: -8px;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width: 180px;
+    background: $main-blue;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+
+    &__logo {
+        padding-left: 10px;
+        width: 35px;
+        height: 30px;
+        margin-right: 3px;
+    }
+
+    &__text {
+        padding: 14px 22px 14px 5px;
+    }
+    &__title {
+        font-size: 10px;
+        color: white;
+        text-shadow: 1px 1px 2px $main-blue;
+        font-weight: 400;
+    }
+    &__link {
+        text-decoration: none;
+        color: white;
+        font-weight: 400;
+        font-size: 18px;
+    }
+}
+
+.hamburger {
+    display: none;
+    width: 30px;
+    height: 14px;
+    position: absolute;
+    top: 55px;
+    right: 25px;
+    
+    @include for-phone-only {
+        display: block;
+    }
+    span {
+        height: 2px;
+        width: 100%;
+        display: block;
+        background: $main-blue;
+        margin-bottom: 4px;
+        transition: 0.6s all;
+    }
+    span:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.hamburger_active {
+    span{
+        margin-bottom: -2px;
+    &:nth-child(1){ 
+        transform: translateY(3px) rotate(-45deg);
+    }
+    &:nth-child(2) {
+        display: none;
+    }
+    &:nth-child(3) {
+        transform: translateY(3px) rotate(45deg);
+    }
+}
+}
+

@@ -1,0 +1,145 @@
+.download-section {
+    padding-top: 130px;
+    height: 610px;
+    position: relative;
+    overflow:hidden;
+    
+    @include for-phone-only {
+        padding-top: 40px;
+    }
+
+    &__blue-bar1 {
+        bottom: -49px;
+        left: 16px;
+    }
+
+    &__blue-bar2 {
+        bottom: -17px;
+        left: 48px;
+    }
+
+    &__blue-bar3 {
+        bottom: 30px;
+        left: -65px;
+    }
+
+    &__brown-bar1 {
+        bottom: 22px;
+        right: 30px;
+        
+        @include for-phone-only {
+            display: none;
+        }
+    }
+
+    &__brown-bar2 {
+        bottom: -49px;
+        right: -65px;
+
+        @include for-phone-only {
+            display: none;
+        }
+    }
+
+    &__brown-bar3 {
+        bottom: 0px;
+        right: 54px;
+
+        @include for-phone-only {
+            display: none;
+        }
+    }
+
+    &__wrapper {
+        height: inherit;
+        display: flex;
+        justify-content: space-between;
+
+        @include for-tablet-only {
+            justify-content: center;
+        }
+    }
+    
+    &__image-wrapper {
+        position: relative;
+
+        @include for-tablet-only {
+            display: none;
+        }
+    }
+
+    &__left-phone {
+        position: absolute;
+        width: 180px;
+        height: 343px;
+        top: -55px;
+        left: -70px;
+
+        @include for-desktop-up {
+            width: 180px;
+            height: 343px;
+            top: -55px;
+            left: -27px;
+        }
+    }
+
+    &__middle-phone {
+        position: absolute;
+        width: 240px;
+        height: 458px;
+        top: -120px;
+        left: 70px;
+        z-index: 2;
+
+        @include for-desktop-up {
+            width: 240px;
+            height: 458px;
+            top: -120px;
+            left: 85px;
+            z-index: 2;
+        }
+    }
+
+    &__right-phone {
+        position: absolute;
+        width: 180px;
+        height: 343px;
+        top: -55px;
+        right: -440px;
+    }
+
+    &__content-wrapper {
+        width: 444px;
+        height: 230px;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 21px;
+        justify-content: center;
+
+        @include for-phone-only {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 26px;
+        color: $main-black;
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: $main-black;
+        opacity: 0.5;
+        margin-bottom: 56px;
+    }
+}

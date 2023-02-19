@@ -1,0 +1,79 @@
+.howitworks-section {
+    min-height: 476px;
+    background: rgba(74, 153, 211, 0.1);
+    margin-bottom: 150px;
+    @include for-phone-landscape {
+        margin-bottom: 75px;
+    }
+    &__wrapper {
+        min-height: inherit;
+        padding: 95px 0;
+    }
+
+    &__title {
+        text-align: center;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 27px;
+        color: $main-blue;
+        margin-bottom: 88px;
+    }
+
+    &__cards-wrapper {
+        display: flex;
+
+        @include for-phone-landscape {
+            padding: 0 35px;
+            justify-content: space-evenly;
+        }
+
+        @include for-phone-only {
+            justify-content: space-around;
+        }
+
+    }
+
+    &__cards-item {
+        text-align: center;
+        margin-right: 106px;
+
+        @include for-phone-landscape {
+            margin: 0;
+        }
+
+    }
+
+    &__cards-item:last-child {
+        margin-right: 0px;
+    }
+    
+    &__card-image {
+        margin-bottom: 30px;
+    }
+
+    &__card-title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 19px;
+        color: $main-black;
+        margin-bottom: 10px;
+
+        @include for-phone-only {
+            font-size: 14px;
+        }
+    }
+
+    &__card-text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: $main-black;
+        
+        @include for-phone-only {
+            font-size:  12px;
+        }
+    }
+}
